@@ -1,0 +1,29 @@
+{
+  "name": "telegrembo",
+  "version": "1.0.0",
+  "description": "Telegram bot for the Maprox platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node .",
+    "pretest": "jshint .",
+    "posttest": "nsp check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maprox/telegrembo.git"
+  },
+  "author": "aintsay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maprox/telegrembo/issues"
+  },
+  "homepage": "https://github.com/maprox/telegrembo#readme",
+  "dependencies": {
+    "dot": "^1.0.3",
+    "node-telegram-bot-api": "^0.21.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6",
+    "nsp": "^2.1.0"
+  }
+}
