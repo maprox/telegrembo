@@ -30,7 +30,7 @@ module.exports = {
      *
      * @param {String|Number|Object} msg
      * @param {String} message
-     * @param {Object} options
+     * @param {Object} [options]
      */
     sendMessage: function(msg, message, options) {
         var chatId = msg;
