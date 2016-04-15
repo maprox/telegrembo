@@ -29,11 +29,11 @@ Use it with caution and care!
     connection string
 
 * **AMQP_EXCHANGE** [*telegram*] - exchange name in AMQP server.
-    **Telegrembo** listens for messages in a query bound to this exchange
+    **Telegrembo** listens for messages in a queue bound to this exchange
 
-* **AMQP_QUEUE_NAME** [*telegram*] - AMQP query name to listen for messages
+* **AMQP_QUEUE_NAME** [*telegram*] - AMQP queue name to listen for messages
 
-* **AMQP_QUEUE_ROUTING_KEY** [*telegram*] - Routing key for the query
+* **AMQP_QUEUE_ROUTING_KEY** [*telegram*] - Routing key for the queue
 
 ## Description
 
