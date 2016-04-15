@@ -6,7 +6,7 @@ require.extensions['.md'] = function (module, filename) {
 
 var commands = [];
 var bot = require('./bot');
-fs.readdirSync('commands').forEach(function(commandFile) {
+fs.readdirSync('server/commands').forEach(function(commandFile) {
     var command = require('./commands/' + commandFile);
     if (command && command.query && command.handler) {
         bot.onText(command.query, command.handler);
