@@ -21,7 +21,8 @@
   "dependencies": {
     "amqplib": "^0.4.1",
     "dot": "^1.0.3",
-    "node-telegram-bot-api": "^0.21.1"
+    "node-telegram-bot-api": "^0.21.1",
+    "when": "^3.7.7"
   },
   "devDependencies": {
     "jshint": "^2.5.6",
