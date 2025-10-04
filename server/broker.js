@@ -31,8 +31,9 @@ module.exports = {
      * @param {Object} message
      */
     process: function(message) {
-        console.log(" [-] Connecting to %s", config.amqp.connection);
-        amqp.connect(config.amqp.connection).then(function(conn) {
+        var connectionString = `amqp://${config.amqp.username}:${config.amqp.password}@${config.amqp.host}:${config.amqp.port}/`;
+        console.log(" [-] Connecting to %s", connectionString);
+        amqp.connect(connectionString).then(function(conn) {
             return when(conn.createChannel().then(function(channel) {
                 console.log(" [+] Connected");
                 console.log(' [+] Preparing to send %s', message.uuid);
@@ -70,8 +71,9 @@ module.exports = {
      * @param {Function} callback
      */
     receive: function(queue, callback) {
-        console.log(" [-] Connecting to %s", config.amqp.connection);
-        amqp.connect(config.amqp.connection).then(function(conn) {
+        var connectionString = `amqp://${config.amqp.username}:${config.amqp.password}@${config.amqp.host}:${config.amqp.port}/`;
+        console.log(" [-] Connecting to %s", connectionString);
+        amqp.connect(connectionString).then(function(conn) {
             return conn.createChannel().then(function(channel) {
                 console.log(" [+] Connected");
                 return getExchange(channel)

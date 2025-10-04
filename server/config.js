@@ -1,14 +1,14 @@
 module.exports = {
     /**
-     * AMQP connection string
+     * AMQP configuration
      * Currently tested and supported only RabbitMQ server
-     *
-     * @type {*|string}
      */
     amqp: {
+        host: process.env.AMQP_HOST || '127.0.0.1',
+        port: process.env.AMQP_PORT || '5672',
+        username: process.env.AMQP_USERNAME || 'guest',
+        password: process.env.AMQP_PASSWORD || 'guest',
         exchange: process.env.AMQP_EXCHANGE || 'telegram',
-        connection: process.env.AMQP_CONNECTION ||
-            'amqp://guest:guest@127.0.0.1//',
         queue: {
             name: process.env.AMQP_QUEUE_NAME || 'telegram',
             routingKey: process.env.AMQP_QUEUE_ROUTING_KEY || 'telegram'

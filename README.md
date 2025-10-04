@@ -25,8 +25,10 @@ Use it with caution and care!
 * **TOKEN** ( **required** ) - Telegram bot token which you got from
  [@BotFather](tg://resolve?domain=BotFather)
 
-* **AMQP_CONNECTION** [*amqp://guest:guest@127.0.0.1//*] - AMQP
-    connection string
+* **AMQP_HOST** [*127.0.0.1*] - AMQP server host
+* **AMQP_PORT** [*5672*] - AMQP server port
+* **AMQP_USERNAME** [*guest*] - AMQP username
+* **AMQP_PASSWORD** [*guest*] - AMQP password
 
 * **AMQP_EXCHANGE** [*telegram*] - exchange name in AMQP server.
     **Telegrembo** listens for messages in a queue bound to this exchange
